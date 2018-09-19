@@ -1,0 +1,37 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.1.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "win": "electron-builder -w ",
+    "publish": "electron-builder build -w -p onTagOrDraft"
+  },
+  "build": {
+    "appId": "com.stonewjr.electron",
+    "win": {
+      "publish": [
+        "github"
+      ],
+      "certificateFile": "private/stonewjr.pfx",
+      "verifyUpdateCodeSignature": false,
+      "publisherName": "stonewjr"
+    }
+  },
+  "repository": "https://github.com/stonewjr/electron",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^2.0.0",
+    "electron-builder": "^20.28.4",
+    "electron-updater": "^3.1.2"
+  }
+}
